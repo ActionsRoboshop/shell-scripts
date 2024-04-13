@@ -5,8 +5,10 @@ jobs:
     job1:
         env: 
           name: "job-chaitu"
+          name1: "job-env-name1"
         runs-on: ubuntu-latest 
         steps:
-        - run: echo "This is env-${name}"
+        - run: echo "This is env-${name} -- ${name1}"
           env: 
            name: "step-env-chaitu"
+           name1: ${{env.name1}}
