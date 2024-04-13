@@ -1,19 +1,12 @@
 name: learing-actions
 run-name: ${{ github.actor }} RoboShop
 on: [push]
-env:
-  job_name: "first-job1"
 jobs:
     job1:
-        env: 
-          name: "job-chaitu"
-          name1: "job-env-name1"
-        runs-on: ubuntu-latest 
-        steps:
-        - run: echo "This is env-${name} -- ${name1}"
-          env: 
-           name: "step-env-chaitu"
-           name1: ${{env.name1}}
+      runs-on: ubunut-latest
+      steps:
+          - name: step1 
+            run: echo "This is step1" && exit 1
 
-        - name: running-${{env.job_name}}    
-          run: echo "This is ${job_name}" # added comment tt
+          - name: step2
+            run: echo "This is step1"  
