@@ -9,4 +9,5 @@ jobs:
             run: echo "This is step1" && exit 1
 
           - name: step2
+            if: ${{ failure() }}
             run: echo "This is step1"  
