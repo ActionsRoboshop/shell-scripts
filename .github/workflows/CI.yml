@@ -8,4 +8,4 @@ jobs:
           - name: step1 
             run: echo "This is step1 - and ${GITHUB_ACTOR}"
             env:  
-              GITHUB_ACTOR: "${{GITHUB_JOB}}"
+              GITHUB_ACTOR: "${{ github.job }}"
