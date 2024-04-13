@@ -1,0 +1,8 @@
+name: learing-actions
+on: [push]
+jobs:
+    job1:
+        runs-on: self-hosted
+        steps:
+        - uses: actions/checkout@v4
+        - run: bash script.sh
