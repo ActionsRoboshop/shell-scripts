@@ -8,3 +8,5 @@ jobs:
         runs-on: ubuntu-latest 
         steps:
         - run: echo "This is env-${name}"
+          env: 
+           name: "step-env-chaitu"
