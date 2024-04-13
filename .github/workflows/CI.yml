@@ -1,4 +1,5 @@
 name: learing-actions
+run-name: ${{ github.actor }} RoboShop
 on: [push]
 jobs:
     job1:
