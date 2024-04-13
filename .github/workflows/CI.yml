@@ -8,6 +8,9 @@ jobs:
           - name: step1 
             run: echo "This is step1 - and ${GITHUB_ACTOR}"
 
+          - name: step1.1
+            run: echo "This is step1 - and ${GITHUB_JOB}"   
+
           - name: step2
             if: ${{ failure() }}
             run: echo "This is step1"  
