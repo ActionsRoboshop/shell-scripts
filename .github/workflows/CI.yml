@@ -3,7 +3,7 @@ run-name: ${{ github.actor }} RoboShop
 on: [push]
 jobs:
     job1:
-        runs-on: self-hosted
+        runs-on: Linux
         steps:
         - uses: actions/checkout@v4
         - run: bash script.sh
