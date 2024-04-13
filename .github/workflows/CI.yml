@@ -3,7 +3,8 @@ run-name: ${{ github.actor }} RoboShop
 on: [push]
 jobs:
     job1:
-        runs-on: Linux
+        env: 
+          name: "job-chaitu"
+        runs-on: ubuntu-latest 
         steps:
-        - uses: actions/checkout@v4
-        - run: bash script.sh
+        - run: echo "This is env-${name}"
