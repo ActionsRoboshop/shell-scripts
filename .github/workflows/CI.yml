@@ -1,6 +1,8 @@
 name: learing-actions
 run-name: ${{ github.actor }} RoboShop
 on: [push]
+env:
+  job_name: "first-job1"
 jobs:
     job1:
         env: 
@@ -12,3 +14,6 @@ jobs:
           env: 
            name: "step-env-chaitu"
            name1: ${{env.name1}}
+
+        - name: running-${{env.job_name}}    
+          run: echo "This is ${job_name}"
