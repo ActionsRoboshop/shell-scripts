@@ -7,5 +7,5 @@ jobs:
       steps:
           - name: step1
             run: bash firstscript.sh
-            working-directory: ./directory1
+            working-directory: directory1
               
