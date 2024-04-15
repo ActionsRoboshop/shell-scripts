@@ -9,14 +9,8 @@ jobs:
       steps:
           - name: step1
             run: |
-             echo "This is step-1"
-            shell: bash
-            if: ${{ env.task == 'actions'}}
-
-          - name: step2
-            run: |
-             echo "This is step-2"
-            shell: bash
-            if: ${{ env.task == 'git-actions'}}    
+             echo "This is without mask -$task"
+             echo "This is without mask -::add-mask::$task"
+            
             
               
