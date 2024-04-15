@@ -10,7 +10,8 @@ jobs:
           - name: step1
             run: |
              echo "This is without mask -$task"
-             echo "hello ::add-mask::$task"
+             echo "::add-mask::$task"
+             echo "this is masked - $task"
             
             
               
