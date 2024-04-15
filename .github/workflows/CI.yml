@@ -4,15 +4,19 @@ on: [push]
 jobs:
     job1:
       runs-on: ubuntu-latest
+      env: 
+        task: "actions"
       steps:
           - name: step1
             run: |
-             echo $0
-            shell: bash  
-           
+             echo "This is step-1"
+            shell: bash
+            if: ${{ env.task == 'actions'}}
 
-          - name: step1
+          - name: step2
             run: |
-             echo $0
-            shell: sh  
+             echo "This is step-2"
+            shell: bash
+            if: ${{ env.task == 'git-actions'}}    
+            
               
