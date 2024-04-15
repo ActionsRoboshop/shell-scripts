@@ -7,7 +7,6 @@ jobs:
       steps:
           - name: step1
             run: |
-             touch c1
              ls -l
-            working-directory: name1
+            working-directory: /opt
               
