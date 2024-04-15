@@ -6,11 +6,6 @@ jobs:
       runs-on: ubuntu-latest
       steps:
           - name: step1
-            run: echo "This is my ${name}"
-            env:
-              name: "step1-name-chaithanya"
-
-          - name: step2
-            run: echo "This is my ${name}"
-            env:
-              name: ${{ jobs.job1.steps[step1].name }}    
+            run: bash firstscript.sh
+            working-directory: ./directory1
+              
