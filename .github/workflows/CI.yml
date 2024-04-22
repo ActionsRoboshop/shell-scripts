@@ -21,6 +21,11 @@ on:
         type: number
         description: "Enter a number"
 
+      myboolean:
+        type: boolean
+        description: "My boolena"
+        default: true  
+
 jobs:
   job1:
     runs-on: ubuntu-latest
@@ -35,6 +40,13 @@ jobs:
     if: ${{ inputs.enternumber == '1' }}
     steps:
       - name: job2-step1
-        run: echo "This is ${{ inputs.enternumber }}"           
+        run: echo "This is ${{ inputs.enternumber }}" 
+
+  job3: 
+    runs-on: ubuntu-latest
+    if: ${{ inputs.myboolean }}
+    steps:
+      - name: job2-step1
+        run: echo "This is ${{ inputs.myboolean }}"                 
             
               
