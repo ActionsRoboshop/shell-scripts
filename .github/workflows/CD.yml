@@ -11,7 +11,7 @@ jobs:
 
       - name: This is step-2 
         id: demo
-        run: echo "This is step-2" && exit 1
+        run: echo "This is step-2"
 
       - name: This is step-2
         if: ${{ always() && steps.demo.conclusion == 'failure' }}  
