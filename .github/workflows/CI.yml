@@ -20,6 +20,7 @@ on:
       enternumber:
         type: number
         description: "Enter a number"
+        required: true
 
       myboolean:
         type: boolean
