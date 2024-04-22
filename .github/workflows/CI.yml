@@ -1,17 +1,19 @@
-name: learing-actions
-run-name: ${{ github.actor }} RoboShop
-on: [push]
+name: THIS IS GIT-HUB Actions
+run-name: ${{ github.actor }} is learning GitHub Actions
+on:
+  workflow_dispatch:
+    inputs:
+      name:
+        type: string
+        required: true
+        description: "Enter your name"
 jobs:
-    job1:
-      runs-on: ubuntu-latest
-      env: 
-        task: "git-actions"
-      steps:
-          - name: step1
-            run: |
-             echo "This is without mask -$task"
-             echo "::add-mask::$task"
-             echo "this is masked - $task"
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: This is step-1
+        run: echo "This is Myname - ${{ inputs.name }}"  
+
             
             
               
