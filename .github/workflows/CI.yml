@@ -6,6 +6,7 @@ on:
       name:
         type: string
         required: true
+        default: "chaithanya"
         description: "Enter your name"
       branches:
         type: choice
