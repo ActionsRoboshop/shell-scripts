@@ -7,12 +7,23 @@ on:
         type: string
         required: true
         description: "Enter your name"
+      branches:
+        type: choice
+        description: "Select the branc"
+        required: true
+        default: "main"
+        options:
+          - "main"
+          - "master"
+          - "dev"  
 jobs:
   job1:
     runs-on: ubuntu-latest
     steps:
       - name: This is step-1
-        run: echo "This is Myname - ${{ inputs.name }}"  
+        run: |
+          echo "This is Myname - ${{ inputs.name }}" 
+          echo "This is branch - ${{ inputs.branches }}" 
 
             
             
