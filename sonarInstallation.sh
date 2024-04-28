@@ -6,6 +6,7 @@ if [ $? -ne 0 ]; then
 useradd sonar
 fi
 
+rm -rf /opt/sonarqube.zip
 curl -L -o /opt/sonarqube.zip  https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-9.9.4.87374.zip
 cd /opt
 unzip -o sonarqube.zip 
