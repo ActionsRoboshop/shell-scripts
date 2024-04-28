@@ -30,5 +30,7 @@ systemctl daemon-reload
 
 systemctl restart sonarqube
 
+systemctl enable sonarqube
+
 
 
