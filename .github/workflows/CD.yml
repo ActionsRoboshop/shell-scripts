@@ -17,11 +17,10 @@ jobs:
            count=$(for i in $changes; do echo $i; done | grep -e  '^script.*' > /dev/null ; echo $?)
            echo "count=$count" >> $GITHUB_OUTPUT
       - name: found changes in script.sh
-        run: echo YES
-        if: ${{ steps.changes.outputs.count}}
+        run: echo " ${{ steps.changes.outputs.count }} "
 
       # - name: found not-changes in script.sh
       #   run: echo NO         
-
+#
             
               
