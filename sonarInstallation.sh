@@ -33,5 +33,5 @@ systemctl restart sonarqube
 systemctl enable sonarqube
 
 # checking for is
-
+#
 
