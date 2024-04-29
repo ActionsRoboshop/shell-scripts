@@ -32,5 +32,6 @@ systemctl restart sonarqube
 
 systemctl enable sonarqube
 
-# checking for 
+# checking for is
+
 
