@@ -35,19 +35,20 @@ jobs:
         run: |
           echo "This is Myname - ${{ inputs.name }}" 
           echo "This is branch - ${{ inputs.branches }}" 
+        if: ${{ inputs.name == 'CHAITU'}}  
 
-  job2: 
-    runs-on: ubuntu-latest
-    if: ${{ inputs.enternumber == '1' }}
-    steps:
-      - name: job2-step1
-        run: echo "This is ${{ inputs.enternumber }}" 
+  # job2: 
+  #   runs-on: ubuntu-latest
+  #   if: ${{ inputs.enternumber == '1' }}
+  #   steps:
+  #     - name: job2-step1
+  #       run: echo "This is ${{ inputs.enternumber }}" 
 
-  job3: 
-    runs-on: ubuntu-latest
-    if: ${{ inputs.myboolean }}
-    steps:
-      - name: job2-step1
-        run: echo "This is ${{ inputs.myboolean }}"                 
+  # job3: 
+  #   runs-on: ubuntu-latest
+  #   if: ${{ inputs.myboolean }}
+  #   steps:
+  #     - name: job2-step1
+  #       run: echo "This is ${{ inputs.myboolean }}"                 
             
               
