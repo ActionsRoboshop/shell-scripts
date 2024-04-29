@@ -7,13 +7,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: This is step-1
-        run: echo "This is step-1"
       - name: finding changes
         id: changes
         shell: bash
         run: |
-           changes=$(git diff --name-only HEAD^ HEAD)
+           changes=`git diff --name-only HEAD^ HEAD`
            count=$(for i in $changes; do echo $i; done | grep -e  '^script.*' > /dev/null ; echo $?)
            echo "count=$count" >> $GITHUB_OUTPUT
       - name: found changes in script.sh
