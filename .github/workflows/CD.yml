@@ -11,9 +11,10 @@ jobs:
         run: echo "This is step-1"
       - name: finding changes
         id: changes
+        shell: bash
         run: |
            changes=$(git diff --name-only HEAD^ HEAD)
-           count=$(echo $changes | grep -e  '^script.*' > /dev/null ; echo $?)
+           count=$(for i in $changes; do echo $i; done | grep -e  '^script.*' > /dev/null ; echo $?)
            echo "count=$count" >> $GITHUB_OUTPUT
       - name: found changes in script.sh
         run: echo YES
