@@ -18,6 +18,7 @@ jobs:
               - 'script.sh'
       - name: found changes in script.sh
         run: echo YES
+        if: ${{ steps.changes.outputs.scripts == 'true' }}
 
       - name: found not-changes in script.sh
         run: echo NO         
