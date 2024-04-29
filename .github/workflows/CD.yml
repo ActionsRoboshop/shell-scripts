@@ -11,7 +11,7 @@ jobs:
         id: changes
         shell: bash
         run: |
-           changes=$(git diff --name-only HEAD~ HEAD) 
+           changes=$(git diff HEAD^ HEAD --name-only) 
            count=$(for i in $changes; do echo $i; done | grep -e  '^script.*' > /dev/null ; echo $?)
            echo "count=$count" >> $GITHUB_OUTPUT
       - name: found changes in script.sh
