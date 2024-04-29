@@ -1,17 +1,25 @@
 name: THIS IS GIT-HUB Actions CD
 run-name: "${{ github.actor }} is learning GitHub Actions"
-on: 
-  push:
-    paths:
-      - "script.sh"
+on: [push]
 
 jobs:
   job1:
     runs-on: ubuntu-latest
     steps:
       - name: This is step-1
-        run: echo "found changes in script.sh"
-      - name: print env
-        run: env  
+        run: echo "This is step-1"
+      - name: finding changes
+        uses: dorny/paths-filter@v2
+        id: changes
+        with:
+          filters: |
+            scripts: 
+              - 'script.sh'
+      - name: found changes in script.sh
+        run: echo YES
+
+      - name: found not-changes in script.sh
+        run: echo NO         
+
             
               
