@@ -1,17 +1,19 @@
 name: THIS IS GIT-HUB Actions
 run-name: "${{ github.actor }} is learning GitHub Actions"
-on: [push]
+on: 
+  workflow_dispatch:
+    inputs:
+      name: 
+        type: string
+        description: "Enter the name:"
 
 jobs:
   job1:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+    #  - uses: actions/checkout@v4
       - name: This is step-1
         run: | 
            echo "new action runner"
-           echo "${{ env.name }}  --  ${name}  -- ${NAME}"
-        env: 
-          name: chaitu                
-            
+           echo "${{ inputs.name }}  --  ${{ inputs.NAME }}"
               
