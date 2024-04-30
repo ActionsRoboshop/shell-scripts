@@ -19,9 +19,5 @@ jobs:
       - name: found changes in script.sh
         run: echo changes found in script.sh file
         if: ${{ steps.changes.outputs.count == '0' }}
-
-      # - name: found not-changes in script.sh
-      #   run: echo NO         
-#
-            
+         
               

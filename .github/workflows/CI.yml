@@ -1,42 +1,14 @@
 name: THIS IS GIT-HUB Actions
 run-name: "${{ github.actor }} is learning GitHub Actions"
-on:
-  workflow_dispatch:
-    inputs:
-      name:
-        type: string
-        required: true
-        default: "chaithanya"
-        description: "Enter your name"
-      branches:
-        type: choice
-        description: "Select the branc"
-        required: true
-        default: "main"
-        options:
-          - "main"
-          - "master"
-          - "dev"  
-      enternumber:
-        type: number
-        description: "Enter a number"
-        required: true
-
-      myboolean:
-        type: boolean
-        description: "My boolena"
-        default: true  
+on: [push]
 
 jobs:
   job1:
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted]
     steps:
       - name: This is step-1
-        run: |
-          echo "This is Myname - ${{ inputs.name }}" 
-          echo "This is branch - ${{ inputs.branches }}" 
-        if: ${{ inputs.name == 'CHAITU'}}  
-
+        run: | 
+           echo "new action runner"
   # job2: 
   #   runs-on: ubuntu-latest
   #   if: ${{ inputs.enternumber == '1' }}
