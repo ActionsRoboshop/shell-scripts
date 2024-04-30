@@ -6,6 +6,7 @@ jobs:
   job1:
     runs-on: [self-hosted]
     steps:
+      - uses: actions/checkout@v4
       - name: This is step-1
         run: | 
            echo "new action runner"
