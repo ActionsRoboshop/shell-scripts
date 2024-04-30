@@ -10,7 +10,7 @@ jobs:
       - name: This is step-1
         run: | 
            echo "new action runner"
-           echo "${{ env.NAME }}  --  ${name}  -- ${NAME}"
+           echo "${{ env.name }}  --  ${name}  -- ${NAME}"
         env: 
           name: chaitu                
             
