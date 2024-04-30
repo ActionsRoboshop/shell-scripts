@@ -4,25 +4,14 @@ on: [push]
 
 jobs:
   job1:
-    runs-on: [self-hosted]
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - name: This is step-1
         run: | 
            echo "new action runner"
-           echo "$PWD"
-  # job2: 
-  #   runs-on: ubuntu-latest
-  #   if: ${{ inputs.enternumber == '1' }}
-  #   steps:
-  #     - name: job2-step1
-  #       run: echo "This is ${{ inputs.enternumber }}" 
-
-  # job3: 
-  #   runs-on: ubuntu-latest
-  #   if: ${{ inputs.myboolean }}
-  #   steps:
-  #     - name: job2-step1
-  #       run: echo "This is ${{ inputs.myboolean }}" #                
+           echo "{{ env.NAME }}  --  ${name}  -- ${NAME}"
+        env: 
+          name: chaitu                
             
               
