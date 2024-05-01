@@ -15,5 +15,5 @@ jobs:
       - name: This is step-1
         run: | 
            echo "new action runner"
-           echo "${{ inputs.name }}  --  ${{ inputs.NAME }}"
+           echo "${{ inputs.name }}  --  ${{ inputs.NAME }}" ; exit 1
               
