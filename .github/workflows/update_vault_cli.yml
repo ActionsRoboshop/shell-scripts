@@ -9,3 +9,9 @@ jobs:
       uses: eLco/setup-vault@v1.0.3
     - name: vault-version
       run: vault --version  
+
+    - name: update vault kv secrets
+      run: vault kv patch -mount=test names name1="${{ github.actor }}"
+
+
+       
