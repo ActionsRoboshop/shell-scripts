@@ -15,7 +15,7 @@ jobs:
       env: 
         VAULT_TOKEN: ${{ secrets.VAULT_TOKEN }}
         VAULT_ADDR: https://54.211.156.157:8200/
-        VAULT_SKIP_VERIFY: true
+        VAULT_SKIP_VERIFY: true #
 
 
        
